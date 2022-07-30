@@ -62,14 +62,14 @@
     </div><!-- /.container -->
   
     <section class="col-lg-10 mx-auto mb-5">
-      <div class="card">
+      <div class="card" id="shortenCard">
         <div class="card-body bg-light">
           
-          <form id="ShortenForm">
+          <form id="shortenForm">
             <div class="col">
               <div class="input-group">
-                <input type="text" name="url" id="id" autocomplete="off" placeholder="votre adresse à réduire"  class="form-control form-control-lg"/>
-                <button type"sybmit" id="btnShortenUrl" class="btn btn-lg btn-success">Réduire l'Url</button>
+                <input type="text" name="url" id="url" autocomplete="off" required placeholder="votre adresse à réduire"  class="form-control form-control-lg"/>
+                <button type"submit" id="btnShortenUrl" class="btn btn-lg btn-success">Réduire l'Url</button>
               </div>
             </div>
           </form>
@@ -84,4 +84,8 @@
       <p>&copy; ManCodeur 2021–2022</p>
     </footer>
 </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('home') }}
 {% endblock %}
